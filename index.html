@@ -1,0 +1,14 @@
+<script>
+  const exampleSocket = new WebSocket("ws://localhost:3000/ws");
+
+  exampleSocket.onopen = function() {
+    console.log('open')
+  }
+  exampleSocket.onerror = function(e) {
+    console.log('error', e)
+  }
+
+  exampleSocket.onclose = function(e) {
+    console.log('close', e)
+  }
+</script>>
