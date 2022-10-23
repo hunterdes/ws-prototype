@@ -44,8 +44,10 @@ const app = express()
 enableWs(app)
 
 app.ws('/echo', (ws, req) => {
+  console.log('echo')
     ws.on('message', msg => {
-        ws.send(msg)
+      console.log('message')
+      ws.send(msg)
     })
 
     ws.on('close', () => {
